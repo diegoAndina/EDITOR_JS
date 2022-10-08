@@ -71,17 +71,17 @@
                             I
                         </button>
 
-                        <button type="button" id="align_left" class="shadow-sm btn btn-outline-primary"
+                        <button type="button" id="align_start" class="shadow-sm btn btn-outline-primary"
                             data-toggle="tooltip" data-placement="top" title="Left Align">
                             <i class="fas fa-align-left"></i>
                         </button>
 
-                        <button type="button" id="aling_center" class="shadow-sm btn btn-outline-secondary"
+                        <button type="button" id="align_center" class="shadow-sm btn btn-outline-secondary"
                             data-toggle="tooltip" data-placement="top" title="Center Align">
                             <i class="fas fa-align-center"></i>
                         </button>
 
-                        <button type="button" id="align-end" class="shadow-sm btn btn-outline-primary"
+                        <button type="button" id="align_end" class="shadow-sm btn btn-outline-primary"
                             data-toggle="tooltip" data-placement="top" title="Right Align">
                             <i class="fas fa-align-right"></i>
                         </button>
@@ -96,8 +96,8 @@
 
         <div class="mt-4">
 
-            <button class="w-full p-4 text-center text-blue-900 bg-white border-2" id="nome">
-                Peter
+            <button class="w-full p-4 bg-light" id="nome">
+                CLIQUE AQUI PARA ME EDITAR !!!!!
             </button>
         </div>
 
@@ -127,14 +127,20 @@
 
             });
             //------------------------------------------    FUNÇÃO QUE ALINHA O TEXTO A ESQUERDA --------------------- --------------------------------------------------
-            $("#align_left").click(function () {
+            $("#align_start").click(function () {
                 $(elemento_selecionado).css('text-align', 'start')
                 console.log('ELEMENTO ATUAL É : ' + elemento_selecionado);
 
             });
-            //------------------------------------------    FUNÇÃO MUDA A COR DA FONTE --------------------- --------------------------------------------------
-            $("#align_left").click(function () {
-                $(elemento_selecionado).css('color', 'red')
+            //------------------------------------------     FUNÇÃO QUE ALINHA O TEXTO AO CENTRO  --------------------- --------------------------------------------------
+            $("#align_center").click(function () {
+                $(elemento_selecionado).css('text-align', 'center')
+                console.log('ELEMENTO ATUAL É : ' + elemento_selecionado);
+
+            });
+            //------------------------------------------     FUNÇÃO QUE ALINHA O TEXTO A DIREITA   --------------------- --------------------------------------------------
+            $("#align_end").click(function () {
+                $(elemento_selecionado).css('text-align', 'end')
                 console.log('ELEMENTO ATUAL É : ' + elemento_selecionado);
 
             });
@@ -143,8 +149,9 @@
     </script>
 
 
+    <!--  ********************************** LEIA *************************************** -->
 
-
+    <!--  CRIE OUTRAS FUNÇOES  -->
 
 
 
