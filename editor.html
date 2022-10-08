@@ -122,11 +122,6 @@
         }
         
         @font-face {
-            font-family: "Giants 2";
-            src: url('fonts/giants_2/Giants.ttf');
-        }
-        
-        @font-face {
             font-family: "Heroes Legend";
             src: url('fonts/heroes_legend/Heroes Legend.ttf');
         }
@@ -199,11 +194,6 @@
         @font-face {
             font-family: "Shaka Pow";
             src: url('fonts/shaka_pow/Shaka Pow.ttf');
-        }
-        
-        @font-face {
-            font-family: "Star Bom";
-            src: url('fonts/starbom/Starbom.ttf');
         }
         
         @font-face {
@@ -334,7 +324,6 @@
                             <option class="mudarFonte">FunnyKid</option>
                             <option class="mudarFonte">Garden Party</option>
                             <option class="mudarFonte">Gemini Moon</option>
-                            <option class="mudarFonte">Giants 2</option>
                             <option class="mudarFonte">Heroes Legend</option>
                             <option class="mudarFonte">Home and Work</option>
                             <option class="mudarFonte">Ka Blam</option>
@@ -350,7 +339,6 @@
                             <option class="mudarFonte">Santana</option>
                             <option class="mudarFonte">Slapstick Comic</option>
                             <option class="mudarFonte">Shaka Pow</option>
-                            <option class="mudarFonte">Star Bom</option>
                             <option class="mudarFonte">The Athalita</option>
                             <option class="mudarFonte">Vampire Wars</option>
                             <option class="mudarFonte">Varsity</option>
@@ -431,6 +419,10 @@
             $("#mudarFonte").change(function() {
                 var values = $("#mudarFonte option:selected");
                 $(elemento_selecionado).css('font-family', values.text())
+            });
+
+            $("#mudarFonte > option").each(function() {
+                $(this).css('font-family', $(this).text())
             });
 
         });
