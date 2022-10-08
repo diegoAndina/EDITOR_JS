@@ -89,6 +89,7 @@
                             data-toggle="tooltip" data-placement="top" title="Tooltip on top">
                             Clear
                         </button>
+
                     </div>
                 </div>
             </div>
@@ -140,6 +141,12 @@
             });
             //------------------------------------------     FUNÇÃO QUE ALINHA O TEXTO A DIREITA   --------------------- --------------------------------------------------
             $("#align_end").click(function () {
+                $(elemento_selecionado).css('text-align', 'end')
+                console.log('ELEMENTO ATUAL É : ' + elemento_selecionado);
+
+            });
+            //------------------------------------------     FUNÇÃO QUE ALTERA O TAMANHO DA FONTE  --------------------- --------------------------------------------------
+            $("#mudaTamanhoFont").click(function () {
                 $(elemento_selecionado).css('text-align', 'end')
                 console.log('ELEMENTO ATUAL É : ' + elemento_selecionado);
 
