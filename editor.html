@@ -73,37 +73,33 @@
     <div class="">
         <section class="w-full">
             <h1 class="p-4 mb-4 font-bold text-center shadow-sm bg-sky-500"> EDITOR DE TEXTO </h1>
-            <div class="flex-box">
-                <div class=" row">
-                    <div class="col">
-                        <button type="button" class="text-black shadow-sm btn btn-outline-secondary font-weight-bolder" id="bold" data-toggle="tooltip" data-placement="top" title="Bold Text">
+            <div class="flex justify-center">
+                <div class=" ">
+                    <div class="">
+                        <button type="button" id="bold" class="">
                             B
                         </button>
 
-                        <button type="button" id="italic" class="italic font-extrabold text-black shadow-sm btn btn-outline-success" data-toggle="tooltip" data-placement="top" title="Italic Text">
+                        <button type="button" id="italic" data-toggle="tooltip" data-placement="top" class="italic" title="Italic Text">
                             I
                         </button>
 
-                        <button type="button" id="align_start" class="shadow-sm btn btn-outline-primary" data-toggle="tooltip" data-placement="top" title="Left Align">
-                            <i class="fas fa-align-left"></i>
+                        <button type="button" id="align_start" class="border">
+                            <i class=" fas fa-align-left text-gray-600 "></i>
                         </button>
 
-                        <button type="button" id="align_center" class="shadow-sm btn btn-outline-secondary" data-toggle="tooltip" data-placement="top" title="Center Align">
-                            <i class="fas fa-align-center"></i>
+                        <button type="button" id="align_center" class="border">
+                            <i class=" fas fa-align-center text-gray-600 "></i>
                         </button>
 
-                        <button type="button" id="align_end" class="shadow-sm btn btn-outline-primary" data-toggle="tooltip" data-placement="top" title="Right Align">
-                            <i class="fas fa-align-right"></i>
+                        <button type="button" id="align_end" class="border">
+                            <i class=" fas fa-align-right text-gray-600 "></i>
                         </button>
-                        <button type="" id="clear" class="p-2 text-white bg-red-600 rounded-md shadow-sm" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-                            Clear
-                        </button>
-                        <select name="" id="mudarFonte" class="shadow-sm btn border border-primary form-select">
-                            <option value="">Selecionar uma Fonte</option>
-                            <option class="mudarFonte" value="action_comics">Action Comics</option>
-                            <option class="mudarFonte" value="akira_expanded">Akira Expanded</option>
-                            <option class="mudarFonte" value="alexandra_5">Alexandra 5</option>
-                        </select>
+                        <input type="number" name="" id="fontSize" min="8" max="76" value="16" placeholder="16">
+
+                        <input type="number" name="" id="position_y" value="200" placeholder="Y">
+                        <input type="number" name="" id="position_x" value="200" placeholder="x">
+
 
                     </div>
                 </div>
@@ -160,10 +156,17 @@
 
             });
             //------------------------------------------     FUNÇÃO QUE ALTERA O TAMANHO DA FONTE  --------------------- --------------------------------------------------
-            $("#mudaTamanhoFont").click(function() {
-                $(elemento_selecionado).css('text-align', 'end')
-                console.log('ELEMENTO ATUAL É : ' + elemento_selecionado);
-
+            $("#fontSize").change(function() {
+                let fontSize = $("#fontSize").val()
+                $(elemento_selecionado).css('font-size', fontSize + 'px')
+                console.log(fontSize);
+            });
+            //------------------------------------------     FUNÇÃO QUE ALTERA A POSIÇÃO DO TEXTO NA TELA  --------------------- --------------------------------------------------
+            $("#position_y").change(function() {
+                let position_y = $("#position_y").val()
+                $(elemento_selecionado).css('position', 'absolute')
+                $(elemento_selecionado).css('top', position_y + 'px')
+                console.log(position_y);
             });
 
             //------------------------------------------     FUNÇÃO QUE ALTERA A FONTE  --------------------- --------------------------------------------------
